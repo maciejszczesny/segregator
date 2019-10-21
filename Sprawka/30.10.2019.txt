@@ -1,0 +1,8 @@
+drabinki dodac push buttony 
+tree view drabinki.ui
+podkategorie wagowe 
+
+
+
+
+Dodaæ baze sqlite  + wyciaganie/dodawanie zawodnikow 

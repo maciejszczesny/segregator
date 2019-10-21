@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="LabelName">
+      <property name="text">
+       <string>Imie</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="TxtName"/>
+    </item>
+    <item row="0" column="3" rowspan="9">
+     <spacer name="verticalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>475</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="LabelSurname">
+      <property name="text">
+       <string>Nazwisko</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="TxtSurname"/>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="LabelAge">
+      <property name="text">
+       <string>Wiek</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLineEdit" name="TxtAge"/>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="LabelWeight">
+      <property name="text">
+       <string>Waga</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QLineEdit" name="TxtWeight"/>
+    </item>
+    <item row="4" column="0">
+     <widget class="QLabel" name="LabelHeight">
+      <property name="text">
+       <string>Wzrost</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QLineEdit" name="TxtHeight"/>
+    </item>
+    <item row="5" column="0">
+     <widget class="QLabel" name="LabelClub">
+      <property name="text">
+       <string>Klub</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QLineEdit" name="TxtClub"/>
+    </item>
+    <item row="6" column="0">
+     <widget class="QLabel" name="LabelGender">
+      <property name="text">
+       <string>Plec</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="1">
+     <widget class="QCheckBox" name="checkBoxWoman">
+      <property name="text">
+       <string>Kobieta</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="1">
+     <widget class="QCheckBox" name="checkBoxMan">
+      <property name="text">
+       <string>Mezczyzna</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="0" colspan="2">
+     <widget class="QPushButton" name="pushButtonAdd">
+      <property name="text">
+       <string>Dodaj zawodnika</string>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="0" colspan="2">
+     <spacer name="horizontalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>548</width>
+        <height>25</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="9" column="2">
+     <widget class="QPushButton" name="BackToMenu">
+      <property name="text">
+       <string>Glówne menu</string>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="4">
+     <widget class="QPushButton" name="pushButtonClose">
+      <property name="text">
+       <string>Zamknij</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButtonClose</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>738</x>
+     <y>545</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>665</x>
+     <y>544</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
