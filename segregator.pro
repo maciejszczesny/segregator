@@ -28,8 +28,7 @@ HEADERS += \
 
 FORMS += \
     MainWindow.ui \
-    drabinki.ui \
-    xmainwindow.ui
+    drabinki.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

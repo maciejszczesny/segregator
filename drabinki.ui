@@ -50,7 +50,7 @@
      <item>
       <widget class="QPushButton" name="pushButton">
        <property name="text">
-        <string>Pokaż drabinkę</string>
+        <string>Pokaż drabinki</string>
        </property>
       </widget>
      </item>
@@ -106,5 +106,22 @@
   </layout>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>Drabinki</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>559</x>
+     <y>478</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>647</x>
+     <y>440</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
