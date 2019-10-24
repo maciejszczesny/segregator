@@ -18,13 +18,11 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     drabinki.cpp \
     main.cpp \
-    mainwindow.cpp \
-    xmainwindow.cpp
+    mainwindow.cpp
 
 HEADERS += \
     drabinki.h \
-    mainwindow.h \
-    xmainwindow.h
+    mainwindow.h
 
 FORMS += \
     MainWindow.ui \

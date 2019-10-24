@@ -87,7 +87,7 @@
      <item>
       <widget class="QPushButton" name="pushButton_3">
        <property name="text">
-        <string>Cofnij do menu</string>
+        <string>Dodaj zawodnika</string>
        </property>
       </widget>
      </item>
@@ -101,7 +101,7 @@
     </layout>
    </item>
    <item row="0" column="0" colspan="2">
-    <widget class="QUndoView" name="undoView"/>
+    <widget class="QTreeView" name="treeView"/>
    </item>
   </layout>
  </widget>

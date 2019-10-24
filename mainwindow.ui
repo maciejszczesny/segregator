@@ -104,7 +104,7 @@
      </widget>
     </item>
     <item row="9" column="0" colspan="2">
-     <widget class="QPushButton" name="BackToMenu">
+     <widget class="QPushButton" name="CreateTable">
       <property name="text">
        <string>Ułóż drabinki</string>
       </property>
