@@ -1,8 +1,7 @@
 #ifndef DRABINKI_H
 #define DRABINKI_H
-#include "mainwindow.h"
 #include <QDialog>
-
+#include <QMainWindow>
 namespace Ui {
 class Drabinki;
 }
@@ -20,7 +19,7 @@ private slots:
 
 private:
     Ui::Drabinki *ui;
-    QMainWindow *mainwindow;
+      QMainWindow *mainwindoww;
 };
 
 #endif // DRABINKI_H
