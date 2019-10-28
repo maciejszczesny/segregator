@@ -1,5 +1,5 @@
 #include "mainwindow.h"
-#include "ui_MainWindow.h"
+#include "ui_mainwindow.h"
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -11,7 +11,7 @@ MainWindow::MainWindow(QWidget *parent)
 //  m_db.setDatabaseName("C:/Users/Maciek/Desktop/dbzawodnicy");
 
   if(!db.open())
-     ui->CreateTable->setText("Nie udalo sie otworzyc bazy danych");
+     ui->CreateTable->setText("Nie udalo sie otworzyc bazy danych, nie można utworzyć drabinek :(");
   else
       ui->CreateTable->setText("Utwórz drabinki");
 
