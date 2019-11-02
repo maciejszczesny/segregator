@@ -1,20 +1,23 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QMessageBox>
+#include <QSqlError>
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("zawodnicy.sqlite");
+  //  db = QSqlDatabase::addDatabase("QSQLITE");
+ //   db.setDatabaseName("zawodnicy.sqlite");
  // QSqlDatabase m_db=QSqlDatabase::AddDatabaseName("QSQLITE");
 //  m_db.setDatabaseName("C:/Users/Maciek/Desktop/dbzawodnicy");
 
-  if(!db.open())
-     ui->CreateTable->setText("Nie udalo sie otworzyc bazy danych, nie można utworzyć drabinek :(");
-  else
-      ui->CreateTable->setText("Utwórz drabinki");
+ // if(!db.open())
+ //    ui->CreateTable->setText("Nie udalo sie otworzyc bazy danych, nie można utworzyć drabinek :(");
+ //    ui->pushButtonAdd->setText("Nie udalo sie otworzyc bazy danych(");
+
+ // else
+  //    ui->CreateTable->setText("Utwórz drabinki");
 
 }
 
@@ -31,8 +34,19 @@ void MainWindow::on_pushButtonClose_clicked()
 
 void MainWindow::on_pushButtonAdd_clicked()
 {
+    db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setDatabaseName("zawodnicy.sqlite");
 
-        QString id,Imie,Nazwisko,Wiek,Waga,Wzrost,Klub;
+    if(!db.open())
+    {
+       ui->pushButtonAdd->setText("Nie udalo sie otworzyc bazy danych, nie można utworzyć drabinek :(");
+    }
+      else
+    {
+        ui->pushButtonAdd->setText("Utwórz drabinki");
+
+    }
+        QString Imie,Nazwisko,Wiek,Waga,Wzrost,Klub;
         Imie=ui->TxtName->text();
         Nazwisko=ui->TxtSurname->text();
         Wiek=ui->TxtAge->text();
@@ -44,7 +58,8 @@ void MainWindow::on_pushButtonAdd_clicked()
 
         db.open();
         QSqlQuery qry;
-        qry.prepare("insert into zawodnicy (id,Imie,Nazwisko,Wiek,Waga,Wzrost) values ('"+id+"','"+Imie+"','"+Nazwisko+"','"+Wiek+"','"+Waga+"','"+Wzrost+"'");
+//        qry.prepare("insert into zawodnicy (Imie,Nazwisko,Wiek,Waga,Wzrost) values ('"+Imie+"','"+Nazwisko+"','"+Wiek+"','"+Waga+"','"+Wzrost+"'");
+        qry.prepare("insert into zawodnicy (Imie,Nazwisko,Wiek,Waga,Wzrost) values ('"+Imie+"','"+Nazwisko+"'");
 
         if(qry.exec())
         {
@@ -52,7 +67,7 @@ void MainWindow::on_pushButtonAdd_clicked()
             db.close();
         }
         else
-            QMessageBox::critical(this,tr("Błąd!!!"),qry.lastError().text());
+           QMessageBox::critical(this,tr("Błąd"),tr("błąd"));
 }
 
 void MainWindow::on_CreateTable_clicked()
