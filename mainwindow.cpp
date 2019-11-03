@@ -2,23 +2,26 @@
 #include "ui_mainwindow.h"
 #include <QMessageBox>
 #include <QSqlError>
+#include <QtSql>
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-  //  db = QSqlDatabase::addDatabase("QSQLITE");
- //   db.setDatabaseName("zawodnicy.sqlite");
- // QSqlDatabase m_db=QSqlDatabase::AddDatabaseName("QSQLITE");
-//  m_db.setDatabaseName("C:/Users/Maciek/Desktop/dbzawodnicy");
 
- // if(!db.open())
- //    ui->CreateTable->setText("Nie udalo sie otworzyc bazy danych, nie można utworzyć drabinek :(");
- //    ui->pushButtonAdd->setText("Nie udalo sie otworzyc bazy danych(");
 
- // else
-  //    ui->CreateTable->setText("Utwórz drabinki");
+    QSqlDatabase db;
+    db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setDatabaseName("C:/Users/Maciek/Documents/qt cpp/segregator/zawodnicy.db");
 
+    if(!db.open())
+    {
+       ui->CheckBase->setText("Nie udalo sie otworzyc bazy danych.");
+      }
+    else
+    {
+        ui->CheckBase->setText("Połączono z bazą.");
+      }
 }
 
 MainWindow::~MainWindow()
@@ -34,40 +37,45 @@ void MainWindow::on_pushButtonClose_clicked()
 
 void MainWindow::on_pushButtonAdd_clicked()
 {
-    db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("zawodnicy.sqlite");
 
-    if(!db.open())
-    {
-       ui->pushButtonAdd->setText("Nie udalo sie otworzyc bazy danych, nie można utworzyć drabinek :(");
-    }
-      else
-    {
-        ui->pushButtonAdd->setText("Utwórz drabinki");
+    qDebug()<<"Start";
 
-    }
-        QString Imie,Nazwisko,Wiek,Waga,Wzrost,Klub;
-        Imie=ui->TxtName->text();
-        Nazwisko=ui->TxtSurname->text();
-        Wiek=ui->TxtAge->text();
-        Waga=ui->TxtWeight->text();
-        Wzrost=ui->TxtHeight->text();
-        Klub=ui->TxtClub->text();
+    QString Imie,Nazwisko,Wiek,Plec;
+     Imie=ui->TxtName->text();
+     Nazwisko=ui->TxtSurname->text();
+     Wiek=ui->TxtAge->text();
+ //    Plec=ui->checkBoxWoman->text();
+//     Plec=ui->checkBoxMan->text();
 
 
 
-        db.open();
-        QSqlQuery qry;
-//        qry.prepare("insert into zawodnicy (Imie,Nazwisko,Wiek,Waga,Wzrost) values ('"+Imie+"','"+Nazwisko+"','"+Wiek+"','"+Waga+"','"+Wzrost+"'");
-        qry.prepare("insert into zawodnicy (Imie,Nazwisko,Wiek,Waga,Wzrost) values ('"+Imie+"','"+Nazwisko+"'");
+     db.open();
+     if(!db.open())
+         qDebug()<<"Problem z otwarciem bazy";
+     else
+         qDebug()<<"Połączono z bazą";
 
-        if(qry.exec())
-        {
-            QMessageBox::information(this,tr("Zapisz"),tr("Zapisano"));
-            db.close();
-        }
-        else
-           QMessageBox::critical(this,tr("Błąd"),tr("błąd"));
+     QSqlQuery qry;
+     qry.prepare("insert into zawodnicy (Imie,Nazwisko,Wiek) values ('"+Imie+"','"+Nazwisko+"','"+Wiek+"')");
+
+     if(qry.exec())
+     {
+         QMessageBox::information(this,tr("Zapis"),tr("Zapisano"));
+         db.close();
+         db.removeDatabase(QSqlDatabase::defaultConnection);
+
+     }
+     else
+     {
+        QMessageBox::critical(this,tr("Błąd"), qry.lastError().text());
+        db.close();
+        db.removeDatabase(QSqlDatabase::defaultConnection);
+     }
+
+     if(!db.open())
+         qDebug()<<"Zamknięto bazę";
+     else
+         qDebug()<<"Nie zamknięto bazy";
 }
 
 void MainWindow::on_CreateTable_clicked()

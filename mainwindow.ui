@@ -15,15 +15,15 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0">
-     <widget class="QLabel" name="LabelName">
+    <item row="12" column="4">
+     <widget class="QPushButton" name="pushButtonClose">
       <property name="text">
-       <string>Imie</string>
+       <string>Zamknij</string>
       </property>
      </widget>
     </item>
-    <item row="0" column="1" colspan="2">
-     <widget class="QLineEdit" name="TxtName"/>
+    <item row="5" column="1" colspan="2">
+     <widget class="QLineEdit" name="TxtClub"/>
     </item>
     <item row="1" column="0">
      <widget class="QLabel" name="LabelSurname">
@@ -32,28 +32,12 @@
       </property>
      </widget>
     </item>
-    <item row="1" column="1" colspan="2">
-     <widget class="QLineEdit" name="TxtSurname"/>
-    </item>
-    <item row="2" column="0">
-     <widget class="QLabel" name="LabelAge">
+    <item row="9" column="0">
+     <widget class="QLabel" name="label">
       <property name="text">
-       <string>Wiek</string>
+       <string>Konkurencje</string>
       </property>
      </widget>
-    </item>
-    <item row="2" column="1" colspan="2">
-     <widget class="QLineEdit" name="TxtAge"/>
-    </item>
-    <item row="3" column="0">
-     <widget class="QLabel" name="LabelWeight">
-      <property name="text">
-       <string>Waga</string>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="1" colspan="2">
-     <widget class="QLineEdit" name="TxtWeight"/>
     </item>
     <item row="4" column="0">
      <widget class="QLabel" name="LabelHeight">
@@ -62,8 +46,98 @@
       </property>
      </widget>
     </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="LabelAge">
+      <property name="text">
+       <string>Wiek</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="LabelWeight">
+      <property name="text">
+       <string>Waga</string>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="3">
+     <widget class="QCheckBox" name="checkBox_3">
+      <property name="text">
+       <string>Techniki specjalne</string>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="2">
+     <widget class="QCheckBox" name="checkBox_2">
+      <property name="text">
+       <string>Układy</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="1">
+     <widget class="QCheckBox" name="checkBoxMan">
+      <property name="text">
+       <string>Mezczyzna</string>
+      </property>
+     </widget>
+    </item>
+    <item row="11" column="0" colspan="2">
+     <widget class="QPushButton" name="CreateTable">
+      <property name="text">
+       <string>Ułóż drabinki</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="0">
+     <widget class="QLabel" name="LabelGender">
+      <property name="text">
+       <string>Plec</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="LabelName">
+      <property name="text">
+       <string>Imie</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="1">
+     <widget class="QCheckBox" name="checkBoxWoman">
+      <property name="text">
+       <string>Kobieta</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1" colspan="2">
+     <widget class="QLineEdit" name="TxtWeight"/>
+    </item>
+    <item row="10" column="0" colspan="2">
+     <widget class="QPushButton" name="pushButtonAdd">
+      <property name="text">
+       <string>Dodaj zawodnika</string>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="1">
+     <widget class="QCheckBox" name="checkBox">
+      <property name="text">
+       <string>Walki</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1" colspan="2">
+     <widget class="QLineEdit" name="TxtName"/>
+    </item>
     <item row="4" column="1" colspan="2">
      <widget class="QLineEdit" name="TxtHeight"/>
+    </item>
+    <item row="6" column="0">
+     <widget class="QLabel" name="TxtId_2">
+      <property name="text">
+       <string>Id</string>
+      </property>
+     </widget>
     </item>
     <item row="5" column="0">
      <widget class="QLabel" name="LabelClub">
@@ -72,59 +146,7 @@
       </property>
      </widget>
     </item>
-    <item row="5" column="1" colspan="2">
-     <widget class="QLineEdit" name="TxtClub"/>
-    </item>
-    <item row="6" column="0">
-     <widget class="QLabel" name="LabelGender">
-      <property name="text">
-       <string>Plec</string>
-      </property>
-     </widget>
-    </item>
-    <item row="6" column="1">
-     <widget class="QCheckBox" name="checkBoxWoman">
-      <property name="text">
-       <string>Kobieta</string>
-      </property>
-     </widget>
-    </item>
-    <item row="7" column="1">
-     <widget class="QCheckBox" name="checkBoxMan">
-      <property name="text">
-       <string>Mezczyzna</string>
-      </property>
-     </widget>
-    </item>
-    <item row="8" column="0">
-     <widget class="QLabel" name="label">
-      <property name="text">
-       <string>Konkurencje</string>
-      </property>
-     </widget>
-    </item>
-    <item row="8" column="1">
-     <widget class="QCheckBox" name="checkBox">
-      <property name="text">
-       <string>Walki</string>
-      </property>
-     </widget>
-    </item>
-    <item row="8" column="2">
-     <widget class="QCheckBox" name="checkBox_2">
-      <property name="text">
-       <string>Układy</string>
-      </property>
-     </widget>
-    </item>
-    <item row="8" column="3">
-     <widget class="QCheckBox" name="checkBox_3">
-      <property name="text">
-       <string>Techniki specjalne</string>
-      </property>
-     </widget>
-    </item>
-    <item row="8" column="4">
+    <item row="9" column="4">
      <spacer name="horizontalSpacer">
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
@@ -137,24 +159,19 @@
       </property>
      </spacer>
     </item>
-    <item row="9" column="0" colspan="2">
-     <widget class="QPushButton" name="pushButtonAdd">
-      <property name="text">
-       <string>Dodaj zawodnika</string>
-      </property>
-     </widget>
+    <item row="1" column="1" colspan="2">
+     <widget class="QLineEdit" name="TxtSurname"/>
     </item>
-    <item row="10" column="0" colspan="2">
-     <widget class="QPushButton" name="CreateTable">
-      <property name="text">
-       <string>Ułóż drabinki</string>
-      </property>
-     </widget>
+    <item row="2" column="1" colspan="2">
+     <widget class="QLineEdit" name="TxtAge"/>
     </item>
-    <item row="11" column="4">
-     <widget class="QPushButton" name="pushButtonClose">
+    <item row="6" column="1">
+     <widget class="QLineEdit" name="TxtId"/>
+    </item>
+    <item row="12" column="0">
+     <widget class="QLabel" name="CheckBase">
       <property name="text">
-       <string>Zamknij</string>
+       <string>Baza danych</string>
       </property>
      </widget>
     </item>
