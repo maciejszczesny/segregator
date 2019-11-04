@@ -32,8 +32,9 @@ Drabinki::~Drabinki()
 void Drabinki::on_pushButton_3_clicked()
 {
     hide();
-        mainwindoww = new QMainWindow(this);
-       mainwindoww->show();
+    //    mainwindoww = new QMainWindow(this);
+      // mainwindoww->show();
+    ((QMainWindow*)this->parent())->show();
 }
 
 void Drabinki::on_ShowLadders_clicked()

@@ -40,15 +40,26 @@ void MainWindow::on_pushButtonAdd_clicked()
 
     qDebug()<<"Start";
 
-    QString Imie,Nazwisko,Wiek,Klub,Waga,Wzrost;
+    QString Imie,Nazwisko,Wiek,Klub,Waga,Wzrost,Plec;
      Imie=ui->TxtName->text();
      Nazwisko=ui->TxtSurname->text();
      Wiek=ui->TxtAge->text();
   //   Klub=ui->TxtClub->text();
    //  Waga=ui->TxtWeight->text();
  //    Wzrost=ui->TxtHeight->text();
- //    Plec=ui->checkBoxWoman->text();
-//     Plec=ui->checkBoxMan->text();
+       Plec=ui->checkBoxWoman->text();
+
+     int plec=0;
+        if (ui->checkBoxWoman->checkState())
+        {
+                plec=1;
+        }
+
+        Plec=ui->checkBoxMan->text();
+        if(ui->checkBoxMan->checkState())
+        {
+            plec=1;
+        }
 
 
 
@@ -61,12 +72,12 @@ void MainWindow::on_pushButtonAdd_clicked()
      QSqlQuery qry;
 //     qry.prepare("insert into zawodnicy (Imie,Nazwisko,Wiek,Klub,Waga,Wzrost) values ('"+Imie+"','"+Nazwisko+"','"+Wiek+"','"+Klub+"','"+Waga+"','"+Wzrost+"')");
 
-        qry.prepare("insert into zawodnicy (Imie,Nazwisko,Wiek) values ('"+Imie+"','"+Nazwisko+"','"+Wiek+"')");
+        qry.prepare("insert into zawodnicy (Imie,Nazwisko,Wiek,Kobieta,Mezczyzna) values ('"+Imie+"','"+Nazwisko+"','"+Wiek+"','"+Plec+"','"+Plec+"')");
      if(qry.exec())
      {
          QMessageBox::information(this,tr("Zapis"),tr("Zapisano"));
          db.close();
-         db.removeDatabase(QSqlDatabase::defaultConnection);
+      //   db.removeDatabase(QSqlDatabase::defaultConnection);
 
      }
      else
