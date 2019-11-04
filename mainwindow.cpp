@@ -40,10 +40,13 @@ void MainWindow::on_pushButtonAdd_clicked()
 
     qDebug()<<"Start";
 
-    QString Imie,Nazwisko,Wiek,Plec;
+    QString Imie,Nazwisko,Wiek,Klub,Waga,Wzrost;
      Imie=ui->TxtName->text();
      Nazwisko=ui->TxtSurname->text();
      Wiek=ui->TxtAge->text();
+  //   Klub=ui->TxtClub->text();
+   //  Waga=ui->TxtWeight->text();
+ //    Wzrost=ui->TxtHeight->text();
  //    Plec=ui->checkBoxWoman->text();
 //     Plec=ui->checkBoxMan->text();
 
@@ -56,8 +59,9 @@ void MainWindow::on_pushButtonAdd_clicked()
          qDebug()<<"Połączono z bazą";
 
      QSqlQuery qry;
-     qry.prepare("insert into zawodnicy (Imie,Nazwisko,Wiek) values ('"+Imie+"','"+Nazwisko+"','"+Wiek+"')");
+//     qry.prepare("insert into zawodnicy (Imie,Nazwisko,Wiek,Klub,Waga,Wzrost) values ('"+Imie+"','"+Nazwisko+"','"+Wiek+"','"+Klub+"','"+Waga+"','"+Wzrost+"')");
 
+        qry.prepare("insert into zawodnicy (Imie,Nazwisko,Wiek) values ('"+Imie+"','"+Nazwisko+"','"+Wiek+"')");
      if(qry.exec())
      {
          QMessageBox::information(this,tr("Zapis"),tr("Zapisano"));
