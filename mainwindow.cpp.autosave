@@ -48,7 +48,7 @@ void MainWindow::on_pushButtonAdd_clicked()
    //  Waga=ui->TxtWeight->text();
  //    Wzrost=ui->TxtHeight->text();
 
- char plec=0;
+ int plec=0;
      Plec=ui->RadioWoman->text();
      if(ui->RadioWoman->isChecked())
      {

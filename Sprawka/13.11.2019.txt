@@ -1,0 +1,2 @@
+wybraæ projekt i w czym
+dodaæ serwer kliencki, (przesy³ miêdzy aplikacjami etc.)

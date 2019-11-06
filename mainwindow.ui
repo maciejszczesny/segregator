@@ -74,13 +74,6 @@
       </property>
      </widget>
     </item>
-    <item row="7" column="1">
-     <widget class="QCheckBox" name="checkBoxMan">
-      <property name="text">
-       <string>Mezczyzna</string>
-      </property>
-     </widget>
-    </item>
     <item row="10" column="0" colspan="2">
      <widget class="QPushButton" name="CreateTable">
       <property name="text">
@@ -99,13 +92,6 @@
      <widget class="QLabel" name="LabelName">
       <property name="text">
        <string>Imie</string>
-      </property>
-     </widget>
-    </item>
-    <item row="6" column="1">
-     <widget class="QCheckBox" name="checkBoxWoman">
-      <property name="text">
-       <string>Kobieta</string>
       </property>
      </widget>
     </item>
@@ -177,6 +163,20 @@
        </size>
       </property>
      </spacer>
+    </item>
+    <item row="6" column="1">
+     <widget class="QRadioButton" name="RadioWoman">
+      <property name="text">
+       <string>Kobieta</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="1">
+     <widget class="QRadioButton" name="RadioMan">
+      <property name="text">
+       <string>Mezczyzna</string>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>
