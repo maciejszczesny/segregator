@@ -23,6 +23,10 @@ private slots:
 
     void on_ShowLadders_clicked();
 
+    void on_comboBox_currentIndexChanged(const QString &arg1);
+
+    void on_CategoryList_currentIndexChanged(const QString &arg1);
+
 private:
     Ui::Drabinki *ui;
       QMainWindow *mainwindoww;

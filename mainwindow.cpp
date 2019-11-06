@@ -10,18 +10,18 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
 
-    QSqlDatabase db;
+//    QSqlDatabase db;
     db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName("C:/Users/Maciek/Documents/qt cpp/segregator/zawodnicy.db");
 
-    if(!db.open())
-    {
-       ui->CheckBase->setText("Nie udalo sie otworzyc bazy danych.");
-      }
-    else
-    {
-        ui->CheckBase->setText("Połączono z bazą.");
-      }
+//    if(!db.open())
+//    {
+//       ui->CheckBase->setText("Nie udalo sie otworzyc bazy danych.");
+//      }
+//    else
+//    {
+//        ui->CheckBase->setText("Połączono z bazą.");
+//      }
 }
 
 MainWindow::~MainWindow()
@@ -48,15 +48,10 @@ void MainWindow::on_pushButtonAdd_clicked()
    //  Waga=ui->TxtWeight->text();
  //    Wzrost=ui->TxtHeight->text();
 
- char plec=0;
      Plec=ui->RadioWoman->text();
-     if(ui->RadioWoman->isChecked())
-     {
-         plec=1;
-     }
+     Plec=ui->RadioMan->text();
 
 
- //     Plec=ui->RadioMan->text();
 
 
 
