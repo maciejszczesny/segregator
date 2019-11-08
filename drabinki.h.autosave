@@ -5,6 +5,7 @@
 #include <QSqlDatabase>
 #include <QtDebug>
 #include <QSqlQuery>
+#include <QTreeWidget>
 namespace Ui {
 class Drabinki;
 }

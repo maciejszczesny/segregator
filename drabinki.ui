@@ -13,7 +13,50 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <layout class="QGridLayout" name="gridLayout_2">
+  <layout class="QGridLayout" name="gridLayout_3">
+   <item row="1" column="0" colspan="2">
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="0" column="2">
+      <widget class="QPushButton" name="TechnikiButton">
+       <property name="text">
+        <string>Techniki</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="UkladyButton">
+       <property name="text">
+        <string>Układy</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>Wybierz kategorię</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QPushButton" name="WalkiButton">
+         <property name="text">
+          <string>Walki</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="CheckBase">
+     <property name="text">
+      <string>Baza</string>
+     </property>
+    </widget>
+   </item>
    <item row="2" column="1">
     <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
@@ -32,110 +75,8 @@
      </item>
     </layout>
    </item>
-   <item row="1" column="1">
-    <spacer name="horizontalSpacer_2">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>40</width>
-       <height>20</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-   <item row="1" column="0">
-    <layout class="QGridLayout" name="gridLayout">
-     <item row="0" column="0">
-      <widget class="QLabel" name="label">
-       <property name="text">
-        <string>Wybierz kategorię</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1">
-      <widget class="QComboBox" name="CategoryList">
-       <item>
-        <property name="text">
-         <string>seniorzy 60-70kg</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>seniorzy 70-80kg</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>seniorzy 80kg+</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>juniorzy 40-50kg</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>juniorzy 50-60kg</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>juniorzy 60kg +</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>mlodzicy 30-40kg</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>mlodzicy 40-50kg</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>mlodzicy 50kg+</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>dzieci 15-20kg</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>dzieci 20-25kg</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>dzieci 30kg+</string>
-        </property>
-       </item>
-      </widget>
-     </item>
-     <item row="0" column="2">
-      <widget class="QPushButton" name="ShowLadders">
-       <property name="text">
-        <string>Pokaż drabinki</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </item>
    <item row="0" column="0" colspan="2">
     <widget class="QTreeView" name="treeView"/>
-   </item>
-   <item row="2" column="0">
-    <widget class="QLabel" name="CheckBase">
-     <property name="text">
-      <string>Baza</string>
-     </property>
-    </widget>
    </item>
   </layout>
  </widget>

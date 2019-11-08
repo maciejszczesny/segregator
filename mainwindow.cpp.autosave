@@ -40,10 +40,10 @@ void MainWindow::on_pushButtonAdd_clicked()
 
     qDebug()<<"Start";
 
-    QString Imie,Nazwisko,Wiek,Klub,Waga,Wzrost;
+    QString Imie,Nazwisko,Kategoria,Klub,Waga,Wzrost;
      Imie=ui->TxtName->text();
      Nazwisko=ui->TxtSurname->text();
-     Wiek=ui->TxtAge->text();
+     Kategoria=ui->TxtAge->text();
      Klub=ui->TxtClub->text();
      Waga=ui->TxtWeight->text();
      Wzrost=ui->TxtHeight->text();
@@ -73,7 +73,7 @@ void MainWindow::on_pushButtonAdd_clicked()
 
      QSqlQuery qry;
 
-       qry.prepare("insert into zawodnicy (Imie,Nazwisko,Wiek,Klub,Waga,Wzrost,Plec,Walki,Uklady,Techniki) values ('"+Imie+"','"+Nazwisko+"','"+Wiek+"','"+Klub+"','"+Waga+"','"+Wzrost+"','"+QString::number(Plec)+"','"+QString::number(walki)+"','"+QString::number(uklady)+"','"+QString::number(techniki)+"')");
+       qry.prepare("insert into zawodnicy (Imie,Nazwisko,Kategoria,Klub,Waga,Wzrost,Plec,Walki,Uklady,Techniki) values ('"+Imie+"','"+Nazwisko+"','"+Kategoria+"','"+Klub+"','"+Waga+"','"+Wzrost+"','"+QString::number(Plec)+"','"+QString::number(walki)+"','"+QString::number(uklady)+"','"+QString::number(techniki)+"')");
 
      if(qry.exec())
      {

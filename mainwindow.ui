@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>646</width>
-    <height>528</height>
+    <width>721</width>
+    <height>415</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,29 +15,18 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
-    <item row="11" column="4">
-     <widget class="QPushButton" name="pushButtonClose">
-      <property name="text">
-       <string>Zamknij</string>
+    <item row="7" column="4">
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
       </property>
-     </widget>
-    </item>
-    <item row="5" column="1" colspan="2">
-     <widget class="QLineEdit" name="TxtClub"/>
-    </item>
-    <item row="1" column="0">
-     <widget class="QLabel" name="LabelSurname">
-      <property name="text">
-       <string>Nazwisko</string>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>338</width>
+        <height>17</height>
+       </size>
       </property>
-     </widget>
-    </item>
-    <item row="8" column="0">
-     <widget class="QLabel" name="label">
-      <property name="text">
-       <string>Konkurencje</string>
-      </property>
-     </widget>
+     </spacer>
     </item>
     <item row="4" column="0">
      <widget class="QLabel" name="LabelHeight">
@@ -46,6 +35,43 @@
       </property>
      </widget>
     </item>
+    <item row="10" column="4">
+     <widget class="QPushButton" name="pushButtonClose">
+      <property name="text">
+       <string>Zamknij</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1" colspan="2">
+     <widget class="QLineEdit" name="TxtWeight"/>
+    </item>
+    <item row="7" column="3">
+     <widget class="QCheckBox" name="checkBox_3">
+      <property name="text">
+       <string>Techniki specjalne</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1" colspan="2">
+     <widget class="QLineEdit" name="TxtSurname"/>
+    </item>
+    <item row="8" column="0" colspan="2">
+     <widget class="QPushButton" name="pushButtonAdd">
+      <property name="text">
+       <string>Dodaj zawodnika</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="2">
+     <widget class="QCheckBox" name="checkBox_2">
+      <property name="text">
+       <string>Układy</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1" colspan="2">
+     <widget class="QLineEdit" name="TxtHeight"/>
+    </item>
     <item row="2" column="0">
      <widget class="QLabel" name="LabelAge">
       <property name="text">
@@ -53,40 +79,25 @@
       </property>
      </widget>
     </item>
-    <item row="3" column="0">
-     <widget class="QLabel" name="LabelWeight">
+    <item row="0" column="1" colspan="2">
+     <widget class="QLineEdit" name="TxtName"/>
+    </item>
+    <item row="7" column="0">
+     <widget class="QLabel" name="label">
       <property name="text">
-       <string>Waga</string>
+       <string>Konkurencje</string>
       </property>
      </widget>
     </item>
-    <item row="8" column="3">
-     <widget class="QCheckBox" name="checkBox_3">
+    <item row="7" column="1">
+     <widget class="QCheckBox" name="checkBox">
       <property name="text">
-       <string>Techniki specjalne</string>
+       <string>Walki</string>
       </property>
      </widget>
     </item>
-    <item row="8" column="2">
-     <widget class="QCheckBox" name="checkBox_2">
-      <property name="text">
-       <string>Układy</string>
-      </property>
-     </widget>
-    </item>
-    <item row="10" column="0" colspan="2">
-     <widget class="QPushButton" name="CreateTable">
-      <property name="text">
-       <string>Ułóż drabinki</string>
-      </property>
-     </widget>
-    </item>
-    <item row="6" column="0">
-     <widget class="QLabel" name="LabelGender">
-      <property name="text">
-       <string>Plec</string>
-      </property>
-     </widget>
+    <item row="2" column="1" colspan="2">
+     <widget class="QLineEdit" name="TxtAge"/>
     </item>
     <item row="0" column="0">
      <widget class="QLabel" name="LabelName">
@@ -95,35 +106,15 @@
       </property>
      </widget>
     </item>
-    <item row="11" column="0">
-     <widget class="QLabel" name="CheckBase">
+    <item row="5" column="1" colspan="2">
+     <widget class="QLineEdit" name="TxtClub"/>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="LabelWeight">
       <property name="text">
-       <string>Baza danych</string>
+       <string>Waga</string>
       </property>
      </widget>
-    </item>
-    <item row="3" column="1" colspan="2">
-     <widget class="QLineEdit" name="TxtWeight"/>
-    </item>
-    <item row="9" column="0" colspan="2">
-     <widget class="QPushButton" name="pushButtonAdd">
-      <property name="text">
-       <string>Dodaj zawodnika</string>
-      </property>
-     </widget>
-    </item>
-    <item row="8" column="1">
-     <widget class="QCheckBox" name="checkBox">
-      <property name="text">
-       <string>Walki</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="1" colspan="2">
-     <widget class="QLineEdit" name="TxtName"/>
-    </item>
-    <item row="4" column="1" colspan="2">
-     <widget class="QLineEdit" name="TxtHeight"/>
     </item>
     <item row="5" column="0">
      <widget class="QLabel" name="LabelClub">
@@ -132,55 +123,70 @@
       </property>
      </widget>
     </item>
-    <item row="8" column="4">
-     <spacer name="horizontalSpacer">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>238</width>
-        <height>20</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-    <item row="1" column="1" colspan="2">
-     <widget class="QLineEdit" name="TxtSurname"/>
-    </item>
-    <item row="2" column="1" colspan="2">
-     <widget class="QLineEdit" name="TxtAge"/>
-    </item>
-    <item row="3" column="4" rowspan="2">
-     <spacer name="verticalSpacer">
-      <property name="orientation">
-       <enum>Qt::Vertical</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>20</width>
-        <height>40</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-    <item row="6" column="1">
-     <widget class="QRadioButton" name="RadioWoman">
+    <item row="9" column="0" colspan="2">
+     <widget class="QPushButton" name="CreateTable">
       <property name="text">
-       <string>Kobieta</string>
+       <string>Ułóż drabinki</string>
       </property>
      </widget>
     </item>
-    <item row="7" column="1">
-     <widget class="QRadioButton" name="RadioMan">
+    <item row="1" column="0">
+     <widget class="QLabel" name="LabelSurname">
       <property name="text">
-       <string>Mezczyzna</string>
+       <string>Nazwisko</string>
       </property>
+     </widget>
+    </item>
+    <item row="10" column="0">
+     <widget class="QLabel" name="CheckBase">
+      <property name="text">
+       <string>Baza danych</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="0" colspan="2">
+     <widget class="QGroupBox" name="Plec">
+      <property name="title">
+       <string>GroupBox</string>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QRadioButton" name="RadioWoman">
+         <property name="text">
+          <string>Kobieta</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="RadioMan">
+         <property name="text">
+          <string>Mezczyzna</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </item>
    </layout>
   </widget>
  </widget>
+ <tabstops>
+  <tabstop>TxtName</tabstop>
+  <tabstop>TxtSurname</tabstop>
+  <tabstop>TxtAge</tabstop>
+  <tabstop>TxtWeight</tabstop>
+  <tabstop>TxtHeight</tabstop>
+  <tabstop>TxtClub</tabstop>
+  <tabstop>checkBox</tabstop>
+  <tabstop>checkBox_2</tabstop>
+  <tabstop>checkBox_3</tabstop>
+  <tabstop>pushButtonAdd</tabstop>
+  <tabstop>CreateTable</tabstop>
+  <tabstop>pushButtonClose</tabstop>
+ </tabstops>
  <resources/>
  <connections>
   <connection>
@@ -190,8 +196,8 @@
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>738</x>
-     <y>545</y>
+     <x>634</x>
+     <y>495</y>
     </hint>
     <hint type="destinationlabel">
      <x>665</x>

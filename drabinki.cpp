@@ -35,57 +35,79 @@ void Drabinki::on_pushButton_3_clicked()
     ((QMainWindow*)this->parent())->show();
 }
 
-void Drabinki::on_ShowLadders_clicked()
+
+void Drabinki::on_WalkiButton_clicked()
 {
     qDebug()<<"Start";
 
      QSqlQueryModel* modal = new QSqlQueryModel();
      QSqlQuery *qry = new QSqlQuery(db);
-     qry->prepare("SELECT Imie,Nazwisko,Waga FROM zawodnicy WHERE  Waga > 60 AND Waga < 70 ORDER BY Waga;");
+     qry->prepare("SELECT Imie,Nazwisko,Klub,Wzrost FROM zawodnicy WHERE walki ='1' ;");
      qry->exec();
      modal->setQuery(*qry);
      ui->treeView->setModel(modal);
 }
 
-void Drabinki::on_CategoryList_currentIndexChanged(const QString &arg1)
+void Drabinki::on_TechnikiButton_clicked()
 {
-    QString kategoria=ui->CategoryList->currentText();
+    qDebug()<<"Start";
 
-
-    db.open();
-    if(!db.open())
-        qDebug()<<"Problem z otwarciem bazy";
-    else
-        qDebug()<<"Połączono z bazą";
-
-
-    QSqlQuery qry;
-        qry.prepare("SELECT * FROM zawodnicy WHERE  Kategoria='"+kategoria+"')");
-
-    if(qry.exec())
-    {
-        while(qry.next())
-        {
-            QSqlQueryModel* modal = new QSqlQueryModel();
-            QSqlQuery *qry = new QSqlQuery(db);
-            modal->setQuery(*qry);
-            ui->treeView->setModel(modal);
-        }
-        db.close();
-       // db.removeDatabase(QSqlDatabase::defaultConnection);
-
-    }
-    else
-    {
-       QMessageBox::critical(this,tr("Błąd"), qry.lastError().text());
-       db.close();
-       db.removeDatabase(QSqlDatabase::defaultConnection);
-    }
-
-    if(!db.open())
-        qDebug()<<"Zamknięto bazę";
-    else
-        qDebug()<<"Nie zamknięto bazy";
-
-
+     QSqlQueryModel* modal = new QSqlQueryModel();
+     QSqlQuery *qry = new QSqlQuery(db);
+     qry->prepare("SELECT Imie,Nazwisko,Klub,Wzrost FROM zawodnicy WHERE techniki ='1' ;");
+     qry->exec();
+     modal->setQuery(*qry);
+     ui->treeView->setModel(modal);
 }
+
+
+void Drabinki::on_UkladyButton_clicked()
+{
+    qDebug()<<"Start";
+
+     QSqlQueryModel* modal = new QSqlQueryModel();
+     QSqlQuery *qry = new QSqlQuery(db);
+     qry->prepare("SELECT Imie,Nazwisko,Klub,Wzrost FROM zawodnicy WHERE uklady ='1' ;");
+     qry->exec();
+     modal->setQuery(*qry);
+     ui->treeView->setModel(modal);
+}
+
+
+//void Drabinki::on_ShowCategory_clicked()
+//{
+//    QString kategoria=ui->CategoryList->currentText();
+//    QSqlQueryModel* modal = new QSqlQueryModel();
+
+//        db.open();
+//        if(!db.open())
+//            qDebug()<<"Problem z otwarciem bazy";
+//        else
+//            qDebug()<<"Połączono z bazą";
+
+//    QSqlQuery *qry = new QSqlQuery(db);
+
+//            qry->prepare("SELECT Kategoria FROM zawodnicy");
+
+//        if(qry->exec())
+//        {
+//            modal->setQuery(*qry);
+//            ui->CategoryList->setModel(modal);
+//            db.close();
+//           // db.removeDatabase(QSqlDatabase::defaultConnection);
+
+//        }
+//        else
+//        {
+//           QMessageBox::critical(this,tr("Błąd"), qry->lastError().text());
+//           db.close();
+//           db.removeDatabase(QSqlDatabase::defaultConnection);
+//        }
+
+//        if(!db.open())
+//            qDebug()<<"Zamknięto bazę";
+//        else
+//            qDebug()<<"Nie zamknięto bazy";
+//}
+
+
