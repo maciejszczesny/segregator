@@ -42,7 +42,7 @@ void Drabinki::on_WalkiButton_clicked()
 
      QSqlQueryModel* modal = new QSqlQueryModel();
      QSqlQuery *qry = new QSqlQuery(db);
-     qry->prepare("SELECT Imie,Nazwisko,Klub,Wzrost FROM zawodnicy WHERE walki ='1' ;");
+     qry->prepare("SELECT Imie,Nazwisko,Klub,Wiek,Waga FROM zawodnicy WHERE walki ='1' ORDER BY Wiek;");
      qry->exec();
      modal->setQuery(*qry);
      ui->treeView->setModel(modal);
@@ -54,7 +54,7 @@ void Drabinki::on_TechnikiButton_clicked()
 
      QSqlQueryModel* modal = new QSqlQueryModel();
      QSqlQuery *qry = new QSqlQuery(db);
-     qry->prepare("SELECT Imie,Nazwisko,Klub,Wzrost FROM zawodnicy WHERE techniki ='1' ;");
+     qry->prepare("SELECT Imie,Nazwisko,Klub,Wiek,Wzrost FROM zawodnicy WHERE techniki ='1' ORDER BY Wzrost;");
      qry->exec();
      modal->setQuery(*qry);
      ui->treeView->setModel(modal);
@@ -67,7 +67,7 @@ void Drabinki::on_UkladyButton_clicked()
 
      QSqlQueryModel* modal = new QSqlQueryModel();
      QSqlQuery *qry = new QSqlQuery(db);
-     qry->prepare("SELECT Imie,Nazwisko,Klub,Wzrost FROM zawodnicy WHERE uklady ='1' ;");
+     qry->prepare("SELECT Imie,Nazwisko,Klub,Wiek FROM zawodnicy WHERE uklady ='1' ORDER BY Wiek;");
      qry->exec();
      modal->setQuery(*qry);
      ui->treeView->setModel(modal);
